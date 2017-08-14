@@ -1,0 +1,60 @@
+@mixin transition($transition...) {
+  -wekit-transition: $transition;
+  transition: $transition;
+}
+
+body {
+  display: table-cell;
+  height: 100vh;
+  width: 100vw;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 34px;
+  color: #98AFC7;
+}
+
+.main {
+  display: inline-block;
+}
+
+.item {
+  position: relative;
+  padding-left: 87px;
+  height: 80px;
+  cursor: pointer;
+  text-align: left;
+  @include transition(all 0.2s);
+  &.active {
+    color: #253368;
+    .switch {
+      background-color: #008CFF;
+    }
+    .inner {
+      margin-left: 24px;
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+      box-shadow: 0 3px 6px 0 rgba(0, 35, 11, 0.3);
+    }
+  }
+}
+
+.switch {
+  position: absolute;
+  left: 0;
+  padding: 3px;
+  box-sizing: border-box;
+  width: 66px;
+  border-radius: 30px;
+  background-color: #E3EDF9;
+  @include transition(all 0.2s);
+}
+
+.inner {
+  margin-left: 0;
+  height: 35px;
+  width: 35px;
+  border-radius: 30px;
+  background-color: white;
+  @include transition(all 0.2s, margin 0.5s);
+  box-shadow: 0 3px 6px 0 rgba(0, 35, 11, 0.2);
+}
