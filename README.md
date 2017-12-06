@@ -1,6 +1,6 @@
 # 路在脚下
 
-<a href="http://www.whezh.com/choose-your-life" target="_blank" alt="Preview">Preview</a>
+<a href="https://hezhii.github.io/choose-your-life" target="_blank" alt="Preview">Preview</a>
 
 > 未 选 择 的 路 
 >
